@@ -7,55 +7,16 @@ import VideoSection from "./components/home/VideoSection";
 import InstagramSection from "./components/home/InstagramSection";
 import ProductCard from "./components/home/ProductCard";
 
+/* ── Product data ─────────────────────────────────────────────────────── */
 const easterGlowProducts = [
-  {
-    id: 223097,
-    name: "【 2026 Easter Glow Set A 】✶ Anti-Blemish Duo",
-    slug: "2026-easter-glow-set-a-anti-blemish-duo",
-    price: "HK$1,488",
-    comparePrice: "HK$2,359",
-    image: "https://i0.wp.com/littlestardusthk.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-03-26-at-6.02.51-PM.jpeg?resize=300%2C300&ssl=1",
-    onSale: true,
-  },
-  {
-    id: 223099,
-    name: "【 2026 Easter Glow Set C 】✶ Wonder Renew Kit",
-    slug: "2026-easter-glow-set-c-wonder-renew-kit",
-    price: "HK$798",
-    comparePrice: "HK$998",
-    image: "https://i0.wp.com/littlestardusthk.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-03-26-at-6.02.51-PM-2.jpeg?resize=300%2C300&ssl=1",
-    onSale: true,
-  },
-  {
-    id: 223085,
-    name: "【 2026 Easter Glow Set B 】✶ Ultimate Repairing Trio",
-    slug: "2026-easter-glow-set-b-ultimate-repairing-trio",
-    price: "HK$587",
-    comparePrice: "HK$734",
-    image: "https://i0.wp.com/littlestardusthk.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-03-26-at-6.02.51-PM-1.jpeg?resize=300%2C300&ssl=1",
-    onSale: true,
-  },
+  { id: 223097, name: "【 2026 Easter Glow Set A 】✶ Anti-Blemish Duo", slug: "2026-easter-glow-set-a-anti-blemish-duo", price: "HK$1,488", comparePrice: "HK$2,359", image: "https://i0.wp.com/littlestardusthk.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-03-26-at-6.02.51-PM.jpeg?resize=300%2C300&ssl=1", onSale: true },
+  { id: 223099, name: "【 2026 Easter Glow Set C 】✶ Wonder Renew Kit", slug: "2026-easter-glow-set-c-wonder-renew-kit", price: "HK$798", comparePrice: "HK$998", image: "https://i0.wp.com/littlestardusthk.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-03-26-at-6.02.51-PM-2.jpeg?resize=300%2C300&ssl=1", onSale: true },
+  { id: 223085, name: "【 2026 Easter Glow Set B 】✶ Ultimate Repairing Trio", slug: "2026-easter-glow-set-b-ultimate-repairing-trio", price: "HK$587", comparePrice: "HK$734", image: "https://i0.wp.com/littlestardusthk.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-03-26-at-6.02.51-PM-1.jpeg?resize=300%2C300&ssl=1", onSale: true },
 ];
 
 const monthlyPromoProducts = [
-  {
-    id: 223146,
-    name: "【 𝟒月優惠 𝐒𝐞𝐭 𝐁 ✶ 𝐃𝐞-𝐁𝐥𝐞𝐦𝐢𝐬𝐡 𝐒𝐨𝐥𝐮𝐭𝐢𝐨𝐧 】",
-    slug: "202604-setb-de-blemish-solution",
-    price: "HK$728",
-    comparePrice: "HK$809",
-    image: "https://i0.wp.com/littlestardusthk.com/wp-content/uploads/2026/03/SetB-Icon_p1.jpg?resize=300%2C300&ssl=1",
-    onSale: true,
-  },
-  {
-    id: 223125,
-    name: "【 𝟒月優惠 𝐒𝐞𝐭 𝐀 ✶ 𝐑𝐚𝐝𝐢𝐚𝐧𝐭 𝐁𝐫𝐢𝐠𝐡𝐭𝐞𝐧𝐢𝐧𝐠 𝐒𝐞𝐭 】",
-    slug: "202604-seta-radiant-brightening-set",
-    price: "HK$818",
-    comparePrice: "HK$909",
-    image: "https://i0.wp.com/littlestardusthk.com/wp-content/uploads/2026/03/SetA-Icon-p1.jpg?resize=300%2C300&ssl=1",
-    onSale: true,
-  },
+  { id: 223146, name: "【 𝟒月優惠 𝐒𝐞𝐭 𝐁 ✶ 𝐃𝐞-𝐁𝐥𝐞𝐦𝐢𝐬𝐡 𝐒𝐨𝐥𝐮𝐭𝐢𝐨𝐧 】", slug: "202604-setb-de-blemish-solution", price: "HK$728", comparePrice: "HK$809", image: "https://i0.wp.com/littlestardusthk.com/wp-content/uploads/2026/03/SetB-Icon_p1.jpg?resize=300%2C300&ssl=1", onSale: true },
+  { id: 223125, name: "【 𝟒月優惠 𝐒𝐞𝐭 𝐀 ✶ 𝐑𝐚𝐝𝐢𝐚𝐧𝐭 𝐁𝐫𝐢𝐠𝐡𝐭𝐞𝐧𝐢𝐧𝐠 𝐒𝐞𝐭 】", slug: "202604-seta-radiant-brightening-set", price: "HK$818", comparePrice: "HK$909", image: "https://i0.wp.com/littlestardusthk.com/wp-content/uploads/2026/03/SetA-Icon-p1.jpg?resize=300%2C300&ssl=1", onSale: true },
 ];
 
 const wonderAromaProducts = [
@@ -71,7 +32,7 @@ const wonderAromaProducts = [
 const starrytaleNewProducts = [
   { id: 219919, name: "STARRYTALE | N.40 Silky Eye Wonder｜絲光緊緻淡紋眼膜", slug: "starrytale-n-40-silky-eye-wonder", price: "HK$399", image: "https://i0.wp.com/littlestardusthk.com/wp-content/uploads/2025/10/N.40-1-2.png?resize=300%2C300&ssl=1" },
   { id: 211370, name: "STARRYTALE | N.43 Wonder Timeless Lifting Mist | 逆齡奇蹟水 | 30mle", slug: "starrytale-n-43-wonder-timeless-lifting-mist", price: "HK$168", image: "https://i0.wp.com/littlestardusthk.com/wp-content/uploads/2025/11/for-pos-53-56-1.png?resize=300%2C300&ssl=1" },
-  { id: 211366, name: "STARRYTALE | Wonder Softest Kissy Lip Fix (Transparent) | 柔嫩護唇精華", slug: "starrytale-wonder-softest-kissy-lip-fix-transparent", price: "HK$249", image: "https://i0.wp.com/littlestardusthk.com/wp-content/uploads/2025/11/Wonder-Softest-Kissy-Lip-Fix-transparent-box.png?resize=300%2C300&ssl=1" },
+  { id: 211366, name: "STARRYTALE | Wonder Softest Kissy Lip Fix (Transparent)", slug: "starrytale-wonder-softest-kissy-lip-fix-transparent", price: "HK$249", image: "https://i0.wp.com/littlestardusthk.com/wp-content/uploads/2025/11/Wonder-Softest-Kissy-Lip-Fix-transparent-box.png?resize=300%2C300&ssl=1" },
   { id: 208706, name: "STARRYTALE | N.48 Wonder Ceramide Creamy Therapy｜皇牌極潤修護療膜", slug: "starrytale-n-48-wonder-ceramide-creamy-therapy", price: "HK$549", image: "https://i0.wp.com/littlestardusthk.com/wp-content/uploads/2025/11/for-pos-53-57.png?resize=300%2C300&ssl=1" },
   { id: 209684, name: "STARRYTALE｜Sandalwood Lullaby Candle｜檀木搖籃曲蠟燭｜190g", slug: "starrytale-sandalwood-lullaby-candle-190g", price: "HK$288", image: "https://i0.wp.com/littlestardusthk.com/wp-content/uploads/2025/11/candle-Sandalwood-Lullaby-190g-box.png?resize=300%2C300&ssl=1" },
   { id: 209665, name: "STARRYTALE｜Dreamer's Fig Blossom Candle｜無花果之夢蠟燭｜190g", slug: "starrytale-dreamers-fig-blossom-candle-190g", price: "HK$288", image: "https://i0.wp.com/littlestardusthk.com/wp-content/uploads/2025/11/candle-SDreamers-Fig-Blossom-190g-box.png?resize=300%2C300&ssl=1" },
@@ -94,28 +55,30 @@ function Divider() {
 
 function BestSellersSection({ products }: { products: typeof bestSellersProducts }) {
   return (
-    <section style={{ maxWidth: 1200, margin: "0 auto", padding: "48px 20px" }}>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40, alignItems: "start" }}>
+    <section className="max-w-[1200px] mx-auto px-5 py-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        {/* Hero image */}
+        <Link href="/products/starrytale-n3-wonder-mask-jumbo-10pcs-box" className="block">
+          <div className="relative w-full" style={{ aspectRatio: "3/4" }}>
+            <Image
+              src="https://i0.wp.com/littlestardusthk.com/wp-content/uploads/elementor/thumbs/WEB_n3--ph71rozfg1w1n6qvf19nx3ji4awwnprynarrfz6auc.jpg?w=1200&ssl=1"
+              alt="N.3 Wonder Mask Jumbo"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
+        </Link>
+        {/* Product grid */}
         <div>
-          <Link href="/products/starrytale-n3-wonder-mask-jumbo-10pcs-box">
-            <div style={{ position: "relative", width: "100%", aspectRatio: "3/4", overflow: "hidden" }}>
-              <Image
-                src="https://i0.wp.com/littlestardusthk.com/wp-content/uploads/elementor/thumbs/WEB_n3--ph71rozfg1w1n6qvf19nx3ji4awwnprynarrfz6auc.jpg?w=1200&ssl=1"
-                alt="N.3 Wonder Mask Jumbo"
-                fill
-                style={{ objectFit: "cover" }}
-              />
-            </div>
-          </Link>
-        </div>
-        <div>
-          <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.4rem, 2.5vw, 2rem)", fontWeight: 700, color: "#333", marginBottom: 24 }}>
-            <strong>Best Sellers</strong>
+          <h2
+            className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-gray-800 mb-6"
+            style={{ fontFamily: "var(--font-serif)" }}
+          >
+            Best Sellers
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
-            {products.map((p) => (
-              <ProductCard key={p.id} product={p} />
-            ))}
+          <div className="grid grid-cols-3 gap-4">
+            {products.map((p) => (<ProductCard key={p.id} product={p} />))}
           </div>
         </div>
       </div>

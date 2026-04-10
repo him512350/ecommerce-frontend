@@ -17,81 +17,59 @@ interface Product {
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
-    <div
-      className="product-card"
-      style={{
-        background: "#fff",
-        position: "relative",
-        overflow: "hidden",
-        textAlign: "center",
-      }}
-    >
-      {/* Sale badge */}
+    <div className="bg-white relative overflow-hidden text-center group transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
       {product.onSale && (
-        <span className="sale-badge">Sale!</span>
+        <span className="absolute top-2 left-2 z-10 bg-[#e9d3c4] text-black text-[11px] font-semibold px-2 py-0.5">
+          Sale!
+        </span>
       )}
 
-      {/* Image */}
-      <Link href={`/products/${product.slug}`} style={{ display: "block", overflow: "hidden" }}>
-        <div style={{ position: "relative", aspectRatio: "1/1", background: "#f5f0ea" }}>
+      <Link href={`/products/${product.slug}`} className="block overflow-hidden">
+        <div className="relative w-full aspect-square bg-stone-50">
           <Image
             src={product.image}
             alt={product.name}
             fill
-            style={{ objectFit: "cover" }}
-            sizes="(max-width: 768px) 50vw, 25vw"
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
       </Link>
 
-      {/* Info */}
-      <div style={{ padding: "12px 8px 8px" }}>
-        <Link href={`/products/${product.slug}`} style={{ color: "inherit" }}>
+      <div className="p-2 pb-3">
+        <Link href={`/products/${product.slug}`}>
           <h3
-            style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: "13px",
-              fontWeight: 400,
-              color: "#333",
-              lineHeight: 1.4,
-              marginBottom: 6,
-              display: "-webkit-box",
-              WebkitLineClamp: 2,
-              WebkitBoxOrient: "vertical",
-              overflow: "hidden",
-            }}
+            className="text-[13px] text-gray-700 leading-snug mb-1.5 line-clamp-2"
+            style={{ fontFamily: "var(--font-sans)", fontWeight: 400 }}
           >
             {product.name}
           </h3>
         </Link>
 
-        {/* Rating */}
-        {product.rating !== undefined && product.rating > 0 && (
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 4, marginBottom: 6 }}>
-            <div className="star-rating">
-              {"★".repeat(Math.round(product.rating))}
-              {"☆".repeat(5 - Math.round(product.rating))}
-            </div>
-            {product.reviewCount !== undefined && (
-              <span style={{ fontSize: "11px", color: "#999" }}>({product.reviewCount})</span>
-            )}
+        {product.rating && product.rating > 0 && (
+          <div className="flex items-center justify-center gap-1 mb-1.5">
+            <span className="text-[#4b4f58] text-xs">{"★".repeat(Math.round(product.rating))}{"☆".repeat(5 - Math.round(product.rating))}</span>
+            {product.reviewCount && <span className="text-[11px] text-gray-400">({product.reviewCount})</span>}
           </div>
         )}
 
-        {/* Price */}
-        <div style={{ marginBottom: 8 }}>
+        <div className="mb-2">
           {product.onSale && product.comparePrice ? (
-            <span style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
-              <del style={{ fontSize: "13px", color: "#999" }}>{product.comparePrice}</del>
-              <strong style={{ fontSize: "14px", color: "#333" }}>{product.price}</strong>
+            <span className="flex items-center justify-center gap-2">
+              <del className="text-[13px] text-gray-400">{product.comparePrice}</del>
+              <strong className="text-sm text-gray-800">{product.price}</strong>
             </span>
           ) : (
-            <span style={{ fontSize: "14px", color: "#333", fontWeight: 600 }}>{product.price}</span>
+            <span className="text-sm font-semibold text-gray-800">{product.price}</span>
           )}
         </div>
 
-        {/* Add to basket */}
-        <button className="add-to-basket-btn">Add to basket</button>
+        <button
+          className="w-full bg-[#111] text-white text-[13px] py-2 px-3 cursor-pointer border-0 transition-colors duration-150 hover:bg-[#808080]"
+          style={{ fontFamily: "var(--font-sans)" }}
+        >
+          Add to basket
+        </button>
       </div>
     </div>
   );
